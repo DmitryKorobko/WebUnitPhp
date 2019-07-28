@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +10,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); });
+Route::get('users/{id}', 'UserController@show');
+Route::get('users', 'UserController@index');
+Route::get('posts/{id}', 'PostController@show');
+Route::get('posts', 'PostController@index');
